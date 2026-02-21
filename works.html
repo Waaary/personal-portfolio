@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人展示 - 作品</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">YOUR NAME</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="works.html" class="nav-link active">作品</a></li>
+                <li><a href="blog.html" class="nav-link">博客</a></li>
+                <li><a href="contact.html" class="nav-link">联系我</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="main-content page-works">
+        <!-- 飞书入口按钮（悬浮固定） -->
+        <div class="feishu-entry">
+            <a href="https://your-feishu-link.com" target="_blank" rel="noopener noreferrer" class="feishu-btn">
+                <svg class="feishu-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                <span>完整作品集（飞书）</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                </svg>
+            </a>
+        </div>
+
+        <!-- 页面标题 -->
+        <section class="page-header">
+            <h1 class="page-title">作品集</h1>
+            <p class="page-subtitle">探索我的创意与技术实践</p>
+        </section>
+
+        <!-- 分类筛选 -->
+        <section class="filter-section">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">全部</button>
+                <button class="filter-tab" data-filter="product">产品</button>
+                <button class="filter-tab" data-filter="program">程序项目</button>
+                <button class="filter-tab" data-filter="operation">运营</button>
+                <button class="filter-tab" data-filter="photography">摄影</button>
+            </div>
+        </section>
+
+        <!-- 作品网格 -->
+        <section class="section">
+            <div class="works-grid four-col" id="worksGrid">
+                <!-- 产品类作品 -->
+                <article class="work-card" data-category="product">
+                    <div class="work-image">
+                        <div class="work-placeholder">产品作品</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">产品</span>
+                        <h3 class="work-name">产品设计方案一</h3>
+                        <p class="work-desc">针对用户痛点的完整产品解决方案，包含需求分析、原型设计与迭代优化...</p>
+                        <a href="https://your-feishu-link.com/work1" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="product">
+                    <div class="work-image">
+                        <div class="work-placeholder">产品作品</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">产品</span>
+                        <h3 class="work-name">产品设计方案二</h3>
+                        <p class="work-desc">从0到1的产品构建过程，涵盖市场调研、竞品分析与功能规划...</p>
+                        <a href="https://your-feishu-link.com/work2" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 程序项目类作品 -->
+                <article class="work-card" data-category="program">
+                    <div class="work-image">
+                        <div class="work-placeholder">程序项目</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">程序项目</span>
+                        <h3 class="work-name">开源项目一</h3>
+                        <p class="work-desc">基于现代技术栈开发的高效工具，提供简洁API与良好扩展性...</p>
+                        <a href="https://your-feishu-link.com/work3" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="program">
+                    <div class="work-image">
+                        <div class="work-placeholder">程序项目</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">程序项目</span>
+                        <h3 class="work-name">Web应用开发</h3>
+                        <p class="work-desc">响应式Web应用设计与开发，注重用户体验与性能优化...</p>
+                        <a href="https://your-feishu-link.com/work4" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 运营类作品 -->
+                <article class="work-card" data-category="operation">
+                    <div class="work-image">
+                        <div class="work-placeholder">运营案例</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">运营</span>
+                        <h3 class="work-name">品牌运营方案</h3>
+                        <p class="work-desc">全渠道品牌运营策略，实现用户增长与品牌影响力提升...</p>
+                        <a href="https://your-feishu-link.com/work5" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="operation">
+                    <div class="work-image">
+                        <div class="work-placeholder">运营案例</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">运营</span>
+                        <h3 class="work-name">内容营销策略</h3>
+                        <p class="work-desc">数据驱动的内容营销方案，精准触达目标用户群体...</p>
+                        <a href="https://your-feishu-link.com/work6" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- 摄影类作品 -->
+                <article class="work-card" data-category="photography">
+                    <div class="work-image">
+                        <div class="work-placeholder">摄影作品</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">摄影</span>
+                        <h3 class="work-name">城市光影系列</h3>
+                        <p class="work-desc">捕捉城市中的光影瞬间，展现都市生活的独特美感...</p>
+                        <a href="https://your-feishu-link.com/work7" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="work-card" data-category="photography">
+                    <div class="work-image">
+                        <div class="work-placeholder">摄影作品</div>
+                    </div>
+                    <div class="work-info">
+                        <span class="work-category">摄影</span>
+                        <h3 class="work-name">人像摄影集</h3>
+                        <p class="work-desc">自然光人像摄影，记录真实情感与个性表达...</p>
+                        <a href="https://your-feishu-link.com/work8" target="_blank" rel="noopener noreferrer" class="work-link">
+                            查看详情
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部版权区 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="copyright">© 2026 YOUR NAME</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
